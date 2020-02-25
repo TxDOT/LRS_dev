@@ -1226,7 +1226,7 @@
                 var serviceString = "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services/TxDOT_Roadways/FeatureServer/0";
                 var paraString = "/query?f=json&where=GID=" + results.features[0].attributes.GID + "&returnGeometry=true&returnM=true&outSR=102100";
                 var queryString = serviceString + paraString;
-                xmlhttp.open("GET", queryString, true);
+                xmlhttp.open("POST", queryString, true);
                 xmlhttp.responseType = 'json';
                 xmlhttp.send();
             }
@@ -1257,7 +1257,7 @@
                 var serviceString = "https://services.arcgis.com/KTcxiTD9dsQw4r7Z/arcgis/rest/services/TxDOT_Control_Sections/FeatureServer/0";
                 var paraString = "/query?f=json&where=GID=" + results.features[0].attributes.GID + " AND CTRL_SECT_NBR='" + results.features[0].attributes.CTRL_SECT_NBR + "'&returnGeometry=true&returnM=true&outSR=102100";
                 var queryString = serviceString + paraString;
-                xmlhttp.open("GET", queryString, true);
+                xmlhttp.open("POST", queryString, true);
                 xmlhttp.responseType = 'json';
                 xmlhttp.send();
             }
